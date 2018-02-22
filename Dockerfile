@@ -20,5 +20,6 @@ RUN apk add --update build-base curl nasm tar bzip2 \
 
   rm -rf ${DIR} && \
   apk del build-base curl tar bzip2 x264 openssl nasm && rm -rf /var/cache/apk/*
+RUN apk add --no-cache bash
 
 ENTRYPOINT ["ffmpeg"]
